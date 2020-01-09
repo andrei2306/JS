@@ -1,0 +1,86 @@
+<!-- 
+
+
+
+O functie "getFirst5Letters" care primeste un sir de caractere si returneaza primele 5 litere(daca exista)
+O functie "concatenate" care primeste o lista de siruri de caractere si returneaza sirurile concatenate
+O functie "getAllDigits" care primeste o lista de siruri de caractere si returneaza cifrele din toate sirurile
+Calculeaza factorialul unui numar ("factorial")
+Calculeaza cel mai mare divizor comun al 2 numere ("cmmdc")
+Calculeaza cel mai mic multiplu comun al 2 numere ("cmmmc")
+Returneaza un array care sa contina toti divizorii unui numar (ex pentru 64: trebuie sa returneze [2,4,8,16,32]) ("divizori")
+
+O functie care sorteaza numerele pare dintr-un array de numere primit ca parametru. ("sort")
+O functie care primeste ca parametru un array de numere. Aceasta sorteaza ascendent numerele pare si descendent numerele impare, in cadrul aceluiasi array primit ca parameru. ("sortAscDesc")
+O functie care primeste 2 parametri(un array si un numar). Folosind binary search verificati daca numarul primit ca parametru se gaseste in array. ("binarySearch")
+O functie care implementeaza binary search pentru a verifica daca un numar se regaseste intr-un array. Dupa ce se termina executia functiei trebuie sa returnati de cate ori s-a apelat functia recursiv ("countBinarySearch")
+ -->
+ <!DOCTYPE html>
+ <html>
+     <head>
+         <title>tema</title>
+         <meta charset="UTF-8">
+         <script>
+
+// O functie "getDigits" care primeste un sir de caractere si returneaza cifrele din sirul respectiv
+        function getDigits(string){
+            var regex = /[0-9]/;
+            var numbersString = '';
+            for (var i = 0; i < string.length; i++){
+                if(regex.test(string[i])){
+                    numbersString +=  string[i];
+                }
+            }
+            return numbersString;
+        }
+        console.log(getDigits('test123*&'));
+        
+    // O functie "getLetters" care primeste un sir de caractere si returneaza doar literele din sirul respectiv
+            function getLettrs(string){
+                var regex = /^[A-Za-z]+$/;
+                var lettersString = '';
+                for (var i = 0; i < string.length; i++){
+                    if(regex.test(string[i])){
+                        lettersString +=  string[i];
+                    }
+                }
+                return lettersString;
+            }
+            console.log(getLettrs('test123*&'));
+ 
+//  O functie care verifica daca un numar este palindrom (ex: 121, 1234321) ("palindrom")  
+
+function palindrom(num){
+        var numberAsString = num;
+        if ( typeof num === "number") {
+          numberAsString = num + '';
+        }
+           for (i = 0; i< numberAsString.length; i++){
+                if(numberAsString[i] !== numberAsString[numberAsString.length-i-1]){
+                    return false;
+                }
+            }
+           return true;
+    }
+
+    console.log (palindrom(212));
+    console.log (palindrom(2126576576));
+
+//   O functie "invertAllgs" care primeste o lista de siruri de caractere si returneaza lista de siruri de caractere inversate 
+    
+    function invertAllgs(str) {
+        if (str === "")
+        return "";
+        else
+        return invertAllgs(str.substr(1)) + str.charAt(0);
+    }
+    console.log (invertAllgs("1234567"));
+
+
+
+</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
