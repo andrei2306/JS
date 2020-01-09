@@ -5,7 +5,7 @@
 O functie "getFirst5Letters" care primeste un sir de caractere si returneaza primele 5 litere(daca exista)
 O functie "concatenate" care primeste o lista de siruri de caractere si returneaza sirurile concatenate
 O functie "getAllDigits" care primeste o lista de siruri de caractere si returneaza cifrele din toate sirurile
-Calculeaza factorialul unui numar ("factorial")
+
 Calculeaza cel mai mare divizor comun al 2 numere ("cmmdc")
 Calculeaza cel mai mic multiplu comun al 2 numere ("cmmmc")
 Returneaza un array care sa contina toti divizorii unui numar (ex pentru 64: trebuie sa returneze [2,4,8,16,32]) ("divizori")
@@ -76,7 +76,11 @@ function palindrom(num){
     }
     console.log (invertAllgs("1234567"));
 
-
+// Calculeaza factorialul unui numar ("factorial")
+	function factorial(n) {
+	  return (n != 1) ? n * factorial(n - 1) : 1;
+	}
+	console.log(factorial(6));
 
 </script>
 	</head>
