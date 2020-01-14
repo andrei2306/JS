@@ -143,6 +143,23 @@ function cmmmc(a,b) {
             return numbersString;
         }
         console.log(getDigits('test123*&'));
+		 
+// 6. O functie "invertAllStrings" care primeste o lista de siruri de caractere si returneaza lista de siruri de caractere inversate
+           
+            function invertAllStrings(arr) {
+                var str = "";
+                var strInvers = "";
+                for (var i = 0; i <= arr.length-1; i++) {
+                    str = arr[i];
+                    for (var j = str.length-1; j >= 0; j--) {
+                        strInvers += str[j];
+                    }  
+                    arr[i]=strInvers;
+                    strInvers = "";
+                }
+                return arr;
+            }
+            console.log(invertAllStrings(["andrei", "merge", "repede"]));
         
     // O functie "getLetters" care primeste un sir de caractere si returneaza doar literele din sirul respectiv
             function getLettrs(string){
